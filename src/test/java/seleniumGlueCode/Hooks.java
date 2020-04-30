@@ -7,6 +7,8 @@ import runner.browserManager.DriverManager;
 import runner.browserManager.DriverManagerFactory;
 import runner.browserManager.DriverType;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class Hooks {
 
@@ -21,8 +23,10 @@ public class Hooks {
         System.out.println("Se esta ejecutando el escenario nro: "+ numberOfCase);
         driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         driver= driverManager.getDriver();
-        driver.get("http://www.institutpedralbes.cat/");
         driver.manage().window().maximize();
+        driver.get("http://www.institutpedralbes.cat/");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
     }
 
     @After

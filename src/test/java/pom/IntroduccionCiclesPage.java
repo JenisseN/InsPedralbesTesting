@@ -18,4 +18,5 @@ public class IntroduccionCiclesPage extends PageBase {
         return this.isDisplayed(locatorTitleIntroCicles) && this.getText(locatorTitleIntroCicles).equals(introCiclesTitle);
     }
 
+
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class PFIPage extends PageBase {
 
-    private String pfiTitle = "PFI – INSTITUT PEDRALBES";
+    private String pfiTitle = "PFI";
     private By locatorTitlePFI = By.className("page-title");
 
     public PFIPage(WebDriver driver) {
@@ -13,6 +13,7 @@ public class PFIPage extends PageBase {
     }
 
     public boolean pfiPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitlePFI) && this.getText(locatorTitlePFI).equals(pfiTitle);
+       return this.isDisplayed(locatorTitlePFI) && this.getText(locatorTitlePFI).equals(pfiTitle);
+
     }
 }

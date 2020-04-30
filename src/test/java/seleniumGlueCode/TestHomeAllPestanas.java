@@ -13,10 +13,15 @@ public class TestHomeAllPestanas extends TestBase {
     public void meEncuentroEnLaPaginaHomeDeInstitutpedralbes() throws Exception {
         Assert.assertTrue(homePage.homePageisDisplayed());
     }
-
+    //Repeticion en pestaña estudis
     @When ( "^Hago click sobre la pestaña Estudis$" )
     public void hagoClickSobreLaPestañaEstudis() throws Exception {
         homePage.clickOnTittleEstudis();
+    }
+    //Repeticion en pestaña projectes
+    @When ( "^Hago click sobre la pestaña Projectes$" )
+    public void hagoClickSobreLaPestañaProjectes() throws Exception {
+        homePage.clickOnTittleProjectes();
     }
 
     //Escenario 1
@@ -24,7 +29,6 @@ public class TestHomeAllPestanas extends TestBase {
     public void enEstudisHagoClickSobreElBotonIntroduccioCicles() throws Exception {
         homePage.clickOnIntroCicles();
     }
-
     @Then ( "^Accedo a la pantalla Introduccio Cicles$" )
     public void accedoALaPantallaIntroduccioCicles() throws Exception {
         Assert.assertTrue("No se redirecciono correctamente a la pagina Introduccio de cicles", introduccioCiclesPage.introCiclesisDisplayed());
@@ -35,17 +39,16 @@ public class TestHomeAllPestanas extends TestBase {
     public void enEstudisHagoClickSobreElBotonDAMDesemvolupamentDAplicacionesMultiplataforma() throws Exception {
         homePage.clickOnDAM();
     }
-
     @Then ( "^Accedo a la pantalla DAM$" )
     public void accedoALaPantallaDAM() throws Exception {
         Assert.assertTrue("No se redirecciono correctamente a la pagina DAM", damPage.damPageisDisplayed());
     }
+
     //Escenario 3
     @And ( "^En Estudis hago click sobre el boton DAW Desemvolupament d'aplicaciones web$" )
     public void enEstudisHagoClickSobreElBotonDAWDesemvolupamentDAplicacionesWeb() throws Exception {
         homePage.clickOnDAW();
     }
-
     @Then ( "^Accedo a la pantalla DAW$" )
     public void accedoALaPantallaDAW() throws Exception {
         Assert.assertTrue("No se redirecciono correctamente a la pagina DAW", dawPage.dawPageisDisplayed());
@@ -56,7 +59,6 @@ public class TestHomeAllPestanas extends TestBase {
     public void enEstudisHagoClickSobreElBotonSMIXSistemesMicroinformaticsYXarxes() throws Exception {
         homePage.clickOnSMX();
     }
-
     @Then ( "^Accedo a la pantalla SMIX$" )
     public void accedoALaPantallaSMIX() throws Exception {
         Assert.assertTrue("No se redirecciono correctamente a la pagina SMIX", smixPage.smixPageisDisplayed());
@@ -67,7 +69,6 @@ public class TestHomeAllPestanas extends TestBase {
     public void enEstudisHagoClickSobreElBotonDAMVideojocs() throws Exception {
         homePage.clickOnDAMVideoJoc();
     }
-
     @Then ( "^Accedo a la pantalla DAM Videojocs$" )
     public void accedoALaPantallaDAMVideojocs() throws Exception {
         Assert.assertTrue("No se redirecciono correctamente a la pagina SMIX", damVideoJocPage.damVideoJocsPageisDisplayed());
@@ -78,7 +79,6 @@ public class TestHomeAllPestanas extends TestBase {
     public void enEstudisHagoClickSobreElBotonASIXCiberseguretat() throws Exception {
         homePage.clickOnASIXCiberseguridad();
     }
-
     @Then ( "^Accedo a la pantalla ASIX Ciberseguretat$" )
     public void accedoALaPantallaASIXCiberseguretat() throws Exception {
         Assert.assertTrue("No se redirecciono correctamente a la pagina ASIX Ciberseguretat", asixCiberseguretatPage.asixCiberseguretataisDisplayed());
@@ -89,10 +89,9 @@ public class TestHomeAllPestanas extends TestBase {
     public void enEstudisHagoClickSobreElBotonPFI() throws Exception {
         homePage.clickOnPFI();
     }
-
     @Then ( "^Accedo a la pantalla PFI$" )
     public void accedoALaPantallaPFI() throws Exception {
-        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", pfiPage.pfiPageisDisplayed());
+        Assert.assertTrue(pfiPage.pfiPageisDisplayed());
     }
 
     //Escenario 8
@@ -100,103 +99,88 @@ public class TestHomeAllPestanas extends TestBase {
     public void enEstudisHaceHagoSobreElBotonEquipImpulsorESO() throws Exception {
         homePage.clickOnEquipImpulsorESO();
     }
-
     @Then ( "^Accedo a la pagina externa https://sites\\.google\\.com/inspedralbes\\.cat/equipimpulsor/inici$" )
-    public void accedoALaPaginaExternaHttpsSitesGoogleComInspedralbesCatEquipimpulsorInici() {
+    public void accedoALaPaginaExternaHttpsSitesGoogleComInspedralbesCatEquipimpulsorInici() throws Exception {
         //  Assert.assertTrue("No se redirecciono correctamente a la pagina Equip Impulsor ESO", externosPage.equipImESOisDisplayed());
     }
 
     //Escenario 9
-    @When ( "^Hago click sobre la pestaña Projectes$" )
-    public void hagoClickSobreLaPestañaProjectes() {
-        homePage.clickOnTittleProjectes();
-    }
-
     @And ( "^En Projectes hago click sobre el boton Robotica$" )
-    public void enProjectesHagoClickSobreElBotonRobotica() {
+    public void enProjectesHagoClickSobreElBotonRobotica() throws Exception {
         homePage.clickOnRobotica();
+    }
+    @Then ( "^Accedo a la pantalla Robotica$" )
+    public void accedoALaPantallaRobotica()throws Exception  {
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", roboticaPage.roboticaPageisDisplayed());
     }
 
     //Escenario 10
-    @Then ( "^Accedo a la pantalla Robotica$" )
-    public void accedoALaPantallaRobotica() {
-        //Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", pfiPage.pfiPageisDisplayed());
-    }
-
     @And ( "^En Projectes hago click sobre el boton Qualitat$" )
-    public void enProjectesHagoClickSobreElBotonQualitat() {
+    public void enProjectesHagoClickSobreElBotonQualitat()throws Exception  {
         homePage.clickOnQualitat();
+    }
+    @Then ( "^Accedo a la pantalla Qualitat$" )
+    public void accedoALaPantallaQualitat() throws Exception {
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", quialitatPage.qualitatPageisDisplayed());
     }
 
     //Escenario 11
-    @Then ( "^Accedo a la pantalla Qualitat$" )
-    public void accedoALaPantallaQualitat() {
-    }
-
     @And ( "^En Projectes hago click sobre el boton Internacional$" )
-    public void enProjectesHagoClickSobreElBotonInternacional() {
+    public void enProjectesHagoClickSobreElBotonInternacional() throws Exception {
         homePage.clickOnInternacional();
+    }
+    @Then ( "^Accedo a la pantalla Internacional$" )
+    public void accedoALaPantallaInternacional() throws Exception {
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", internacionalPage.internacionalPageisDisplayed());
     }
 
     //Escenario 12
-    @Then ( "^Accedo a la pantalla Internacional$" )
-    public void accedoALaPantallaInternacional() {
-    }
-
     @And ( "^En Projectes hago click sobre el boton Internacional y click sobre el boton Movilidad Internacional$" )
-    public void enProjectesHagoClickSobreElBotonInternacionalYClickSobreElBotonMovilidadInternacional() {
-        homePage.clickOnQMobilitatInteracional();
-
+    public void enProjectesHagoClickSobreElBotonInternacionalYClickSobreElBotonMovilidadInternacional() throws Exception {
+        homePage.clickOnMobilitatInteracional();
     }
-
-    //Escenario 13
     @Then ( "^Accedo a la pantalla Movilidad Internacional$" )
-    public void accedoALaPantallaMovilidadInternacional() {
+    public void accedoALaPantallaMovilidadInternacional() throws Exception {
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", mobilitatInternacionalPage.movilitatInPageisDisplayed());
     }
+    //Escenario 13
 
     @And ( "^En Projectes hago click sobre el boton InnovaFP$" )
-    public void enProjectesHagoClickSobreElBotonInnovaFP() {
+    public void enProjectesHagoClickSobreElBotonInnovaFP() throws Exception {
         homePage.clickOnInnovaFP();
+    }
+    @Then ( "^Accedo a la pantalla InnovaFP$" )
+    public void accedoALaPantallaInnovaFP() throws Exception {
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", innovaFPPage.innovaFPPageisDisplayed());
     }
 
     //Escenario 14
-    @Then ( "^Accedo a la pantalla InnovaFP$" )
-    public void accedoALaPantallaInnovaFP() {
-    }
-
     @And ( "^En Projectes hago click sobre el boton Empreneduria$" )
-    public void enProjectesHagoClickSobreElBotonEmpreneduria() {
+    public void enProjectesHagoClickSobreElBotonEmpreneduria() throws Exception {
         homePage.clickOnEmpreneduria();
+    }
+    @Then ( "^Accedo a la pantalla Empreneduria$" )
+    public void accedoALaPantallaEmpreneduria() throws Exception {
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", empreneduriaPage.empreneduriaPageisDisplayed());
     }
 
     //Escenario 15
-    @Then ( "^Accedo a la pantalla Empreneduria$" )
-    public void accedoALaPantallaEmpreneduria() {
+    @And ( "^En Projectes hago click sobre el boton Escola empresa$" )
+    public void enProjectesHagoClickSobreElBotonEscolaEmpresa() throws Exception {
+        homePage.clickOnEscolaEmpresa();
     }
-
-    @When ( "^Hago click sobre la pestaña Escola empresa$" )
-    public void hagoClickSobreLaPestañaEscolaEmpresa() {
-        homePage.clickOnQualitat();
+    @Then ( "^Accedo a la pantalla Escola empresa$" )
+    public void accedoALaPantallaEscolaEmpresa() throws Exception{
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", escolaEmpresaPage.escolaEmpresaPageisDisplayed());
     }
 
     //Escenario 16
-    @And ( "^En Projectes hago click sobre el boton Escola empresa$" )
-    public void enProjectesHagoClickSobreElBotonEscolaEmpresa() {
-        homePage.clickOnEscolaEmpresa();
-    }
-
-    @Then ( "^Accedo a la pantalla Escola empresa$" )
-    public void accedoALaPantallaEscolaEmpresa() {
-    }
-
-    //Escenario 17
-
     @And ( "^En Projectes hago click sobre el boton FP Dual$" )
-    public void enProjectesHagoClickSobreElBotonFPDual() {
+    public void enProjectesHagoClickSobreElBotonFPDual() throws Exception {
         homePage.clickOnFPDual();
     }
-
     @Then ( "^Accedo a la pantalla FP Dual$" )
-    public void accedoALaPantallaFPDual() {
+    public void accedoALaPantallaFPDual() throws Exception{
+        Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", fpDualPage.fpDualPageisDisplayed());
     }
 }
