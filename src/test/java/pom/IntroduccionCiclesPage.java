@@ -3,7 +3,8 @@ package pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class IntroduccionCiclesPage extends BasePage{
+
+public class IntroduccionCiclesPage extends PageBase {
 
     private String introCiclesTitle = "Introducció Cicles";
     private By locatorTitleIntroCicles = By.className("page-title");
@@ -12,8 +13,7 @@ public class IntroduccionCiclesPage extends BasePage{
         super(driver);
     }
 
-
-    //Los metodos son las accciones que vamos a hacer en BasePage
+    //Se heredan los metodos de pagebase
     public boolean introCiclesisDisplayed() throws Exception{
         return this.isDisplayed(locatorTitleIntroCicles) && this.getText(locatorTitleIntroCicles).equals(introCiclesTitle);
     }

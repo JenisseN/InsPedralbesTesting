@@ -3,12 +3,12 @@ package pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DAMVideoJoc extends BasePage {
+public class DAMVideoJocPage extends PageBase {
 
     private String damVideoJTitle = "DAM Videojocs";
     private By locatorTitleDAMVideoJ = By.className("page-title");
 
-    public DAMVideoJoc(WebDriver driver) {
+    public DAMVideoJocPage(WebDriver driver) {
         super(driver);
     }
 

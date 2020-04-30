@@ -4,7 +4,7 @@ package pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DAWPage extends BasePage {
+public class DAWPage extends PageBase {
 
     private String dawTitle = "DAW";
     private By locatorTitleDAW = By.className("page-title");
