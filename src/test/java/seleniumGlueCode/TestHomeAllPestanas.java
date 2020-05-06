@@ -11,7 +11,7 @@ public class TestHomeAllPestanas extends TestBase {
     //Escenario REPETICION HOME
     @Given ( "^Me encuentro en la pagina home de institutpedralbes$" )
     public void meEncuentroEnLaPaginaHomeDeInstitutpedralbes() throws Exception {
-        Assert.assertTrue(homePage.homePageisDisplayed());
+        Assert.assertTrue( homePage.homePageisDisplayed());
     }
     //Repeticion en pestaña estudis
     @When ( "^Hago click sobre la pestaña Estudis$" )
@@ -19,9 +19,9 @@ public class TestHomeAllPestanas extends TestBase {
         homePage.clickOnTittleEstudis();
     }
     //Repeticion en pestaña projectes
-    @When ( "^Hago click sobre la pestaña Projectes$" )
-    public void hagoClickSobreLaPestañaProjectes() throws Exception {
-        homePage.clickOnTittleProjectes();
+    @When ( "^Despliego la pestaña Projectes$" )
+    public void despliegoLaPestañaProjectes()  throws Exception {
+        homePage.toMoveMouseOnTittleProjectes();
     }
 
     //Escenario 1
@@ -135,10 +135,12 @@ public class TestHomeAllPestanas extends TestBase {
     }
 
     //Escenario 12
-    @And ( "^En Projectes hago click sobre el boton Internacional y click sobre el boton Movilidad Internacional$" )
-    public void enProjectesHagoClickSobreElBotonInternacionalYClickSobreElBotonMovilidadInternacional() throws Exception {
-        homePage.clickOnMobilitatInteracional();
+    @And ( "^Despliego la pestaña Internacional y click sobre el boton Movilidad Internacional$" )
+    public void despliegoLaPestañaInternacionalYClickSobreElBotonMovilidadInternacional() throws Exception {
+        homePage.toMoveMouseOnTitleInternacional();
+        homePage.clickOnMobilitatInternacional();
     }
+
     @Then ( "^Accedo a la pantalla Movilidad Internacional$" )
     public void accedoALaPantallaMovilidadInternacional() throws Exception {
         Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", mobilitatInternacionalPage.movilitatInPageisDisplayed());
@@ -183,4 +185,6 @@ public class TestHomeAllPestanas extends TestBase {
     public void accedoALaPantallaFPDual() throws Exception{
         Assert.assertTrue("No se redirecciono correctamente a la pagina PFI", fpDualPage.fpDualPageisDisplayed());
     }
+
+
 }

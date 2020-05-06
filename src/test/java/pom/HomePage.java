@@ -26,7 +26,7 @@ public class HomePage extends PageBase {
     private By ButtonEmpreneduriaLocator = By.linkText("Emprenedoria");
     private By ButtonInnovaFPLocator = By.linkText("InnovaFP");
     private By ButtonMovilidadInternacionalLocator = By.linkText("Mobilitat internacional");
-    private By ButtonInternacionalLocator = By.className("sf-with-ul"); //By.linkText("International");
+    private By ButtonInternacionalLocator = By.linkText("International");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -74,8 +74,8 @@ public class HomePage extends PageBase {
         this.click(ButtonEquipImESOLocator);
     }
 
-    public void clickOnTittleProjectes() throws Exception {
-        this.click(ButtonProjectesLocator);
+    public void toMoveMouseOnTittleProjectes() throws Exception {
+        this.moveToMouse(ButtonProjectesLocator);
     }
 
     public void clickOnRobotica() throws Exception {
@@ -102,11 +102,19 @@ public class HomePage extends PageBase {
         this.click(ButtonInnovaFPLocator);
     }
 
-    public void clickOnMobilitatInteracional() throws Exception {
-        this.click(ButtonMovilidadInternacionalLocator);
-    }
-
     public void clickOnInternacional() throws Exception {
         this.click(ButtonInternacionalLocator);
     }
+
+    public void toMoveMouseOnTitleInternacional() throws Exception {
+        this.moveToMouse(ButtonInternacionalLocator);
+    }
+
+    public void clickOnMobilitatInternacional() throws Exception {
+        this.click(ButtonMovilidadInternacionalLocator);
+    }
+
+
+
+
 }
