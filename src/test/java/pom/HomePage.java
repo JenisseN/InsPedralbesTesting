@@ -27,6 +27,10 @@ public class HomePage extends PageBase {
     private By ButtonInnovaFPLocator = By.linkText("InnovaFP");
     private By ButtonMovilidadInternacionalLocator = By.linkText("Mobilitat internacional");
     private By ButtonInternacionalLocator = By.linkText("International");
+    //Locators pestaña On Som
+    private By ButtonOnSom = By.linkText("On som");
+
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -114,6 +118,9 @@ public class HomePage extends PageBase {
         this.click(ButtonMovilidadInternacionalLocator);
     }
 
+    public void clickOnOnSom() throws Exception {
+        this.click(ButtonOnSom);
+    }
 
 
 

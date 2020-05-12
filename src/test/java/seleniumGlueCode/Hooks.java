@@ -26,7 +26,6 @@ public class Hooks {
         driver.manage().window().maximize();
         driver.get("http://www.institutpedralbes.cat/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
     }
 
     @After
@@ -44,21 +43,21 @@ public class Hooks {
     //ESTO ES NUEVO
     @Before(order=1)
     public void beforeScenario(){
-        System.out.println("Start the browser and Clear the cookies");
+        System.out.println("Inicio el browser y limpio cookies");
     }
     @Before(order=0)
     public void beforeScenarioStart(){
-        System.out.println("-----------------Start of Scenario-----------------");
+        System.out.println("-----------------Inicio del escenario-----------------");
     }
 
 
     @After(order=0)
     public void afterScenarioFinish(){
-        System.out.println("-----------------End of Scenario-----------------");
+        System.out.println("-----------------Fin del escenario-----------------");
     }
     @After(order=1)
     public void afterScenario(){
-        System.out.println("Log out the user and close the browser");
+        System.out.println("El usuario salio y cerro el bowser");
     }
 
 }

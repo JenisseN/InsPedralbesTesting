@@ -30,6 +30,8 @@ public class TestBase {
     protected RoboticaPage roboticaPage =new RoboticaPage(driverInP);
     protected InnovaFPPage innovaFPPage =new InnovaFPPage(driverInP);
 
+    //Pestañas On Som
+    protected OnSomPage onSomPage = new OnSomPage(driverInP);
 
 
 

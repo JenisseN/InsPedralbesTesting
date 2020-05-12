@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 
-// tags ={"@tag1"} )
+
 @CucumberOptions (
         features = "src/test/java/features" ,
-        glue = ("seleniumGlueCode"), tags = {"@Test"}
+        glue = ("seleniumGlueCode"), tags = {"@SmokeTest"}
 )
 // tags = {"@SmokeTest"}
 public class TestRunner {

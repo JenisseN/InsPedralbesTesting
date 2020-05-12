@@ -34,6 +34,7 @@ Feature: Test pestañas de la web
     And En Estudis hago click sobre el boton DAM Videojocs
     Then Accedo a la pantalla DAM Videojocs
 
+  @SmokeTest
   Scenario: Quiero acceder a la pantalla ASIX Ciberseguretat desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Hago click sobre la pestaña Estudis
