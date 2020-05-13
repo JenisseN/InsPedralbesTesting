@@ -34,21 +34,18 @@ Feature: Test pestañas de la web
     And En Estudis hago click sobre el boton DAM Videojocs
     Then Accedo a la pantalla DAM Videojocs
 
-  @SmokeTest
   Scenario: Quiero acceder a la pantalla ASIX Ciberseguretat desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Hago click sobre la pestaña Estudis
     And En Estudis hago click sobre el boton ASIX Ciberseguretat
     Then Accedo a la pantalla ASIX Ciberseguretat
 
-  @Test
   Scenario: Quiero acceder a la pantalla PFI desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Hago click sobre la pestaña Estudis
     And En Estudis hago click sobre el boton PFI
     Then Accedo a la pantalla PFI
 
- @Test
   Scenario: Quiero acceder a la pantalla Equip impulsor ESO desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Hago click sobre la pestaña Estudis
@@ -67,13 +64,11 @@ Feature: Test pestañas de la web
     And En Projectes hago click sobre el boton Qualitat
     Then Accedo a la pantalla Qualitat
 
-
   Scenario: Quiero acceder a la pantalla Internacional desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Projectes
     And En Projectes hago click sobre el boton Internacional
     Then Accedo a la pantalla Internacional
-
 
   Scenario: Quiero acceder a la pantalla Mobilitat Internacional desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
@@ -81,12 +76,11 @@ Feature: Test pestañas de la web
     And Despliego la pestaña Internacional y click sobre el boton Movilidad Internacional
     Then Accedo a la pantalla Movilidad Internacional
 
-
   Scenario: Quiero acceder a la pantalla InnovaFP desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Projectes
     And En Projectes hago click sobre el boton InnovaFP
-    Then Accedo a la pantalla InnovaFPÇ
+    Then Accedo a la pantalla InnovaFP
 
   Scenario: Quiero acceder a la pantalla Empreneduria desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
@@ -99,7 +93,6 @@ Feature: Test pestañas de la web
     When Despliego la pestaña Projectes
     And En Projectes hago click sobre el boton Escola empresa
     Then Accedo a la pantalla Escola empresa
-
 
   Scenario: Quiero acceder a la pantalla FP Dual desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
