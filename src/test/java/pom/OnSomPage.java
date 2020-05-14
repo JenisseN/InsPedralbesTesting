@@ -1,20 +1,25 @@
 package pom;
 
+import freemarker.ext.servlet.FreemarkerServlet;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import javax.xml.ws.WebEndpoint;
+import java.util.List;
 
 public class OnSomPage  extends PageBase {
 
-    //Tituto, localizador, boton enviar
+    //Tituto On som, localizador, boton enviar
     private  String onSomTitle = "On som";
     private By locatorTitleOnSom = By.className("page-title");
-    private By locatorEnviarB = By.className("wpcf7-form-control wpcf7-submit");
+    private By locatorEnviarB =By.cssSelector("input[type='submit'][value='Enviar']");
 
-    //Localizadores de mensajes de alerta del formulario de contacto
-    private By locatormsgObligarotio= By.className("wpcf7-not-valid-tip");
-    private By locatormsgCheckCamps= By.className("wpcf7-response-output wpcf7-display-none wpcf7-validation-errors");
-    private By locatormsgemailError= By.className("wpcf7-not-valid-tip");
-    private By locatormsgSuccesfulySend= By.className("wpcf7-response-output wpcf7-display-none wpcf7-mail-sent-ok");
+    //Localizadores de mensajes de alerta del formulario
+    private By locatormsgObligarotio= By.xpath("//*[@id='customSelect_3']/div[1]/span)");
+    private By locatormsgCheckCamps= By.xpath("//*[@id='customSelect_3']/div[1]/span)");
 
     //Localizadores de campos del formulario de contacto
     private By locatorcampNom= By.className("wpcf7-form-control wpcf7-text wpcf7-validates-as-required");
@@ -28,7 +33,11 @@ public class OnSomPage  extends PageBase {
     }
 
     public void clickSendButton() throws Exception {
-        this.click(locatorEnviarB);
+        if (this.isDisplayed(locatorEnviarB)) {
+            this.click(locatorEnviarB);
+        }else {
+            System.out.println("El boton "+ locatorEnviarB +" no se encontro ni se pudo clickar.");
+        }
     }
 
     public boolean onSomisDisplayed() throws Exception {
@@ -36,34 +45,31 @@ public class OnSomPage  extends PageBase {
     }
 
     public boolean msgCampRequiredisDisplayed(String msgRequired) throws Exception {
-        return this.isDisplayed(locatormsgObligarotio) && this.getText(locatormsgObligarotio).equals(msgRequired);
+        return this.getText(locatormsgObligarotio).equals(msgRequired);
     }
 
     public boolean msgCheckCampsisDisplayed(String msgCheck) throws Exception {
-        return this.isDisplayed(locatormsgCheckCamps) && this.getText(locatormsgCheckCamps).equals(msgCheck);
+        return this.getText(locatormsgCheckCamps).equals(msgCheck);
     }
 
-    public boolean msgEmailErrordisDisplayed(String msgEmailError) throws Exception {
-        return this.isDisplayed(locatormsgemailError) && this.getText(locatormsgemailError).equals(msgEmailError);
-    }
-
-    public boolean msgSendSuccesfulyisDisplayed(String msgSuccesfully) throws Exception {
-        return this.isDisplayed(locatormsgSuccesfulySend) && this.getText(locatormsgSuccesfulySend).equals(msgSuccesfully);
-    }
 
     public void writeInCampName(String msgNom) throws Exception {
+        this.click(locatorcampNom);
         this.write(locatorcampNom , msgNom);
     }
 
     public void writeInCampEmail(String msgEmail) throws Exception {
+        this.click(locatorcampCorreu);
         this.write(locatorcampCorreu , msgEmail);
     }
 
     public void writeInCampAssumpte(String msgAssumpte) throws Exception {
+        this.click(locatorcampAssumpte);
         this.write(locatorcampAssumpte , msgAssumpte);
     }
 
     public void writeInCampMessage(String msgMissatge) throws Exception {
+        this.click(locatorcampMissatge);
         this.write(locatorcampMissatge , msgMissatge);
     }
 
@@ -83,8 +89,13 @@ public class OnSomPage  extends PageBase {
         return this.read(locatorcampMissatge);
     }
 
+    public void downOnOnSom() throws Exception {
+        //ScrollDown
+        //There are many ways to scroll up and down in Selenium Webdriver I always use Java Script to do the same.
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,850)");
+        //js.executeScript("javascript:window.scrollBy(250,850)");
 
-
-
+    }
 
 }

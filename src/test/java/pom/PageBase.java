@@ -17,6 +17,7 @@ public class PageBase {
     public void write(By element, String data) throws Exception {
         try {
             WebElement eTextBox = driver.findElement(element);
+            eTextBox.clear();
             eTextBox.sendKeys(data);
         } catch (Exception e) {
             throw new Exception("No se pudo escribir sobre el elemento: " + element);
