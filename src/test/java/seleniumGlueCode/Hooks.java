@@ -25,7 +25,7 @@ public class Hooks {
         driver= driverManager.getDriver();
         driver.manage().window().maximize();
         driver.get("http://www.institutpedralbes.cat/");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @After

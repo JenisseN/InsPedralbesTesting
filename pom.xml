@@ -27,12 +27,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>3.7.1</version>
-    </dependency>
-
-    <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-java</artifactId>
       <version>1.2.5</version>
@@ -69,6 +63,21 @@
       <version>4.12</version>
       <scope>compile</scope>
     </dependency>
+
+    <!-- NUEVA DEPENDENCIA SELENIUM 4 ALPHA PARA CHROME DRIVER-->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <version>4.0.0-alpha-6</version>
+    </dependency>
+
+    <!-- NUEVA DEPENDENCIA SELENIUM 4 ALPHA -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.0.0-alpha-2</version>
+    </dependency>
+
   </dependencies>
 
   <build>

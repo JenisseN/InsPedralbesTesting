@@ -1,7 +1,6 @@
 package pom;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage extends PageBase {
@@ -30,7 +29,6 @@ public class HomePage extends PageBase {
     private By ButtonInternacionalLocator = By.linkText("International");
     //Locators pestaña On Som
     private By ButtonOnSom = By.linkText("On som");
-
 
 
     public HomePage(WebDriver driver) {
@@ -122,8 +120,5 @@ public class HomePage extends PageBase {
     public void clickOnOnSom() throws Exception {
         this.click(ButtonOnSom);
     }
-
-
-
 
 }
