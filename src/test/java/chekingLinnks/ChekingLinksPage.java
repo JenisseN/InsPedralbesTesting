@@ -10,22 +10,21 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+//Assert.assertTrue("There are broken links", checkLinksObj.chekingLinksPagLinks());
 public class ChekingLinksPage {
 
     public WebDriver driver;
 
     public ChekingLinksPage(WebDriver driver) {
         this.driver = driver;
-
-        //Assert.assertTrue("There are broken links", checkLinksObj.chekingLinksPagLinks());
     }
 
 
     public boolean chekingLinksPagLinks() {
         List<WebElement> links = driver.findElements(By.tagName("a"));
         String url = "";
-        List<String> linksOK = new ArrayList<String>();
-        List<String> linksRotos = new ArrayList<String>();
+        List<String> linksOk = new ArrayList<String>();
+        List<String> linksBroken = new ArrayList<String>();
 
         HttpURLConnection httpURLConnection = null;
         int responseCode = 200;
@@ -45,21 +44,21 @@ public class ChekingLinksPage {
 
                 if (responseCode > 400) {
                     System.out.println("ERROR BROKEN LINK: --" + url);
-                    linksRotos.add(url);
+                    linksBroken.add(url);
                 } else {
                     System.out.println("VALID LINK: --" + url);
-                    linksOK.add(url);
+                    linksOk.add(url);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        System.out.println("VALID LINKS: --"+ linksOK.size());
-        System.out.println("BROKEN LINKS: --"+ linksRotos.size());
-        if(linksRotos.size()>0){
+        System.out.println("VALID LINKS: --"+ linksOk.size());
+        System.out.println("BROKEN LINKS: --"+ linksBroken.size());
+        if(linksBroken.size()>0){
             System.out.println("************************** ERROR ******************* BROKEN LINKS");
-            for(int i=0; i< linksRotos.size(); i++){
-                System.out.println(linksRotos.get(i));
+            for(int i=0; i< linksBroken.size(); i++){
+                System.out.println(linksBroken.get(i));
             }
             return false;
         }else{

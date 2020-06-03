@@ -4,6 +4,7 @@ Feature: Test pestañas de la web
  // Background:
     //Given Me encuentro en la pagina home de institutpedralbes
 
+  @SmokeTest
   Scenario: Quiero acceder a la pantalla Introduccion ciclos desde la pantalla Home
     Given Me encuentro en la pagina home de institutpedralbes
     When Hago click sobre la pestaña Estudis
