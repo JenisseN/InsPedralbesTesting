@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
+    private static DriverManager driverManager;
     private static WebDriver driver;
     private static int numberOfCase  = 0;
-    private static DriverManager driverManager;
 
 
     @Before
@@ -25,39 +25,18 @@ public class Hooks {
         driver= driverManager.getDriver();
         driver.manage().window().maximize();
         driver.get("http://www.institutpedralbes.cat/");
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
     @After
     public void tearDown(){
         System.out.println("El escenario nro: "+numberOfCase+ " se ejecuto correctamente");
         driverManager.quitDriver();
+        System.out.println("Se ha cerrado el navegador");
     }
 
-    //metodo estatico que devuelve la instancia del navegador
     public static WebDriver getDriverInsPedralbes(){
         return driver;
-    }
-
-
-    //ESTO ES NUEVO
-    @Before(order=1)
-    public void beforeScenario(){
-        System.out.println("Inicio el browser y limpio cookies");
-    }
-    @Before(order=0)
-    public void beforeScenarioStart(){
-        System.out.println("-----------------Inicio del escenario-----------------");
-    }
-
-
-    @After(order=0)
-    public void afterScenarioFinish(){
-        System.out.println("-----------------Fin del escenario-----------------");
-    }
-    @After(order=1)
-    public void afterScenario(){
-        System.out.println("El usuario salio y cerro el bowser");
     }
 
 }

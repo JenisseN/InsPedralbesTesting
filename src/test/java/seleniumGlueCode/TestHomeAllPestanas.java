@@ -92,6 +92,7 @@ public class TestHomeAllPestanas extends TestBase {
     @Then ( "^Accedo a la pantalla PFI$" )
     public void accedoALaPantallaPFI() throws Exception {
         Assert.assertTrue(pfiPage.pfiPageisDisplayed());
+        //pfiPage.pfiPageClose();
     }
 
     //Escenario 8

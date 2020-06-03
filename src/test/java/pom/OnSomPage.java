@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class OnSomPage  extends PageBase {
+public class OnSomPage extends PageBase {
 
     //Tituto On som, localizador, boton enviar
     private  String onSomTitle = "On som";
@@ -15,7 +15,7 @@ public class OnSomPage  extends PageBase {
     //Localizadores de mensajes de alerta del formulario
     private By locatormsgObligaroty= By.partialLinkText("El campo es obligatorio.");
     private By locatormsgCheckCamps= By.className("wpcf7-response-output wpcf7-display-none wpcf7-validation-errors");///no se encontro el locatorr
-    private By locatormsgNotValid= By.partialLinkText("La dirección de correo electrónico");
+    private By locatormsgNotValid = By.xpath("//form[@class='wpcf7-form invalid']//div[@class='wpcf7-response-output wpcf7-display-none wpcf7-validation-errors']"); // //tipoElemento[@TipoLocalizador='nombreLocalizador']
 
     //Localizadores de campos input en el formulario de contacto
     private By locatorFieldName = By.name("your-name");
@@ -87,6 +87,11 @@ public class OnSomPage  extends PageBase {
     public void scrollDownToBottonPage() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
+
+    public boolean formluariIsDisplayed() throws Exception {
+        return isDisplayed(locatorFieldName) && isDisplayed(locatorFieldEmail) && isDisplayed(locatorFieldTopic) && isDisplayed(locatorFieldMessage)
+                && isDisplayed(locatorEnviarB);
     }
 
 }

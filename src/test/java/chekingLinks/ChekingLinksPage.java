@@ -52,7 +52,6 @@ public class ChekingLinksPage {
                 e.printStackTrace();
             }
     }
-
 }
 
     public void brokenLinks() {
