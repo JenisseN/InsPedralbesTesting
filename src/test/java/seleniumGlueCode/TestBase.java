@@ -1,6 +1,6 @@
 package seleniumGlueCode;
 
-import chekingLinnks.ChekingLinksPage;
+import chekingLinks.ChekingLinksPage;
 import org.openqa.selenium.WebDriver;
 import pom.*;
 

@@ -187,4 +187,13 @@ public class TestHomeAllPestanas extends TestBase {
     }
 
 
+    @When ( "^Verifico todos los links de la web$" )
+    public void verificoTodosLosLinksDeLaWeb() {
+        checkLinksObj.chekingLinksPagLinks();
+    }
+
+    @Then ( "^Debo listar links rotos y validos$" )
+    public void deboListarLinksRotosYValidos() {
+        checkLinksObj.brokenLinks();
+    }
 }

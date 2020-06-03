@@ -5,6 +5,11 @@ Feature: Test pestañas de la web
     //Given Me encuentro en la pagina home de institutpedralbes
 
   @SmokeTest
+  Scenario: Quiero acceder a todos los links y obtener los links rotos
+    Given Me encuentro en la pagina home de institutpedralbes
+    When Verifico todos los links de la web
+    Then Debo listar links rotos y validos
+
   Scenario: Quiero acceder a la pantalla Introduccion ciclos desde la pantalla Home
     Given Me encuentro en la pagina home de institutpedralbes
     When Hago click sobre la pestaña Estudis
