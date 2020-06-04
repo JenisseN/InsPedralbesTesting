@@ -13,7 +13,7 @@ public class RoboticaPage  extends PageBase {
     }
 
     public boolean roboticaPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleRobotica) && this.getText(locatorTitleRobotica).equals(roboticaTitle);
+        return this.isDisplayed(locatorTitleRobotica) && this.read(locatorTitleRobotica).equals(roboticaTitle);
     }
 
 

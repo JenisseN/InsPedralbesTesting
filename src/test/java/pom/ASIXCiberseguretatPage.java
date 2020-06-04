@@ -13,6 +13,6 @@ public class ASIXCiberseguretatPage extends PageBase {
     }
 
     public boolean asixCiberseguretataisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleASIXCiber) && this.getText(locatorTitleASIXCiber).equals(asixCiberTitle);
+        return this.isDisplayed(locatorTitleASIXCiber) && this.read(locatorTitleASIXCiber).equals(asixCiberTitle);
     }
 }

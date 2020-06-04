@@ -9,7 +9,7 @@ public class TestBase {
 
     protected ChekingLinksPage checkLinksObj =new ChekingLinksPage(driverInP);
     protected HomePage homePage = new HomePage(driverInP);
-    //Pestaña Estudis-->Cicles
+
     protected IntroduccionCiclesPage introduccioCiclesPage = new IntroduccionCiclesPage(driverInP);
     protected DAMPage damPage = new DAMPage(driverInP);
     protected DAWPage dawPage = new DAWPage(driverInP);
@@ -17,10 +17,9 @@ public class TestBase {
     protected ASIXCiberseguretatPage asixCiberseguretatPage = new ASIXCiberseguretatPage(driverInP);
     protected DAMVideoJocPage damVideoJocPage = new DAMVideoJocPage(driverInP);
     protected PFIPage pfiPage = new PFIPage(driverInP);
-    //LINKS EXTERNOS
+
     protected LinksExternPage externosPage= new LinksExternPage(driverInP);
 
-    // Pestaña Projectes
     protected EmpreneduriaPage empreneduriaPage =new EmpreneduriaPage(driverInP);
     protected EscolaEmpresaPage escolaEmpresaPage =new EscolaEmpresaPage(driverInP);
     protected FPDualPage fpDualPage =new FPDualPage(driverInP);
@@ -30,10 +29,6 @@ public class TestBase {
     protected RoboticaPage roboticaPage =new RoboticaPage(driverInP);
     protected InnovaFPPage innovaFPPage =new InnovaFPPage(driverInP);
 
-    //Pestañas On Som
     protected OnSomPage onSomPage = new OnSomPage(driverInP);
-
-
-
 
 }

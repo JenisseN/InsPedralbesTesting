@@ -14,6 +14,6 @@ public class SMIXPage extends PageBase {
     }
 
     public boolean smixPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleSMIX) && this.getText(locatorTitleSMIX).equals(smixTitle);
+        return this.isDisplayed(locatorTitleSMIX) && this.read(locatorTitleSMIX).equals(smixTitle);
     }
 }

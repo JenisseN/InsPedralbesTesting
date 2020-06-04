@@ -1,11 +1,11 @@
 package runner.browserManager;
 
-//Clase encargada de crear los distintos manegadores para los distintos navegadores
+
+
 public class DriverManagerFactory {
 
     public static DriverManager getManager(DriverType type ){
         DriverManager driverManager=null;
-
         switch(type){
             case CHROME:
                 driverManager= new ChromeDriverManager();
@@ -14,10 +14,9 @@ public class DriverManagerFactory {
                 driverManager= new FirefoxDriverManager();
                 break;
             default:
-                System.out.print("Invalid browser Selected");
+                System.out.print("El navegador seleccionado es invalido");
                 break;
         }
         return driverManager;
     }
-
 }

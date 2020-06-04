@@ -2,7 +2,6 @@ package pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 
 public class OnSomPage extends PageBase {
@@ -37,19 +36,19 @@ public class OnSomPage extends PageBase {
     }
 
     public boolean onSomisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleOnSom) && this.getText(locatorTitleOnSom).equals(onSomTitle);
+        return this.isDisplayed(locatorTitleOnSom) && this.read(locatorTitleOnSom).equals(onSomTitle);
     }
 
     public boolean msgFieldRequiredisDisplayed(String msgRequired) throws Exception {
-        return this.getText(locatormsgObligaroty).equals(msgRequired);
+        return this.read(locatormsgObligaroty).equals(msgRequired);
     }
 
     public boolean msgNotValidDisplayed(String msgNotValid) throws Exception {
-        return this.getText(locatormsgNotValid).equals(msgNotValid);
+        return this.read(locatormsgNotValid).equals(msgNotValid);
     }
 
     public boolean msgCheckCampsisDisplayed(String msgCheck) throws Exception {
-        return this.getText(locatormsgCheckCamps).equals(msgCheck);
+        return this.read(locatormsgCheckCamps).equals(msgCheck);
     }
 
     public void writeInCampName(String msgFieldName) throws Exception {

@@ -13,6 +13,6 @@ public class EmpreneduriaPage extends PageBase {
     }
 
     public boolean empreneduriaPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleEmpreneduria) && this.getText(locatorTitleEmpreneduria).equals(empreneduriaTitle);
+        return this.isDisplayed(locatorTitleEmpreneduria) && this.read(locatorTitleEmpreneduria).equals(empreneduriaTitle);
     }
 }

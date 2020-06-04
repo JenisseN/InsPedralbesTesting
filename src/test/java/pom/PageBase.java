@@ -30,11 +30,11 @@ public class PageBase {
         }
     }
 
-    public String getText(By element) throws Exception {
+    public String read(By element) throws Exception {
         try {
             return driver.findElement(element).getText();
         } catch (Exception e) {
-            throw new Exception("No se pudo encontrar el elemento: " + element);
+            throw new Exception("No se pudo leer el elemento: " + element);
         }
     }
 
@@ -54,7 +54,7 @@ public class PageBase {
             action.perform();
             System.out.println("Se desplego " + elem);
         } catch (Exception e) {
-            throw new Exception("No se pudo clickear sobre el elemento: " + element);
+            throw new Exception("No se pudo mover sobre el elemento: " + element);
         }
     }
 
@@ -71,14 +71,8 @@ public class PageBase {
         }
     }
 
-    public String read(By element) throws Exception {
-        try {
-            return driver.findElement(element).getText();
-        } catch (Exception e) {
-            throw new Exception("No se pudo leer el elemento: " + element);
-        }
-    }
 
+    ///////////////////Documentado hasta aqui
     public void write(By element, String data) throws Exception {
         try {
             WebElement eTextBox = driver.findElement(element);//Debe buscar otra vez

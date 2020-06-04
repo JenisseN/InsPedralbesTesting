@@ -11,7 +11,7 @@ public class LinksExternPage extends PageBase {
     public LinksExternPage(WebDriver driver) { super(driver); }
 
     public boolean equipImpulsorPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleEquipImESO) && this.getText(locatorTitleEquipImESO).equals(equipImESOTitle);
+        return this.isDisplayed(locatorTitleEquipImESO) && this.read(locatorTitleEquipImESO).equals(equipImESOTitle);
     }
 
 }

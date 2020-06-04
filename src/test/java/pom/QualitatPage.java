@@ -13,6 +13,6 @@ public class QualitatPage extends PageBase {
     }
 
     public boolean qualitatPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleQualitat) && this.getText(locatorTitleQualitat).equals(qualitatTitle);
+        return this.isDisplayed(locatorTitleQualitat) && this.read(locatorTitleQualitat).equals(qualitatTitle);
     }
 }

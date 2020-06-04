@@ -30,7 +30,7 @@ public class Hooks {
 
     @After
     public void tearDown(){
-        System.out.println("El escenario nro: "+numberOfCase+ " se ejecuto correctamente");
+        System.out.println("El escenario nro: "+numberOfCase+ " se ejecuto");
         driverManager.quitDriver();
         System.out.println("Se ha cerrado el navegador");
     }

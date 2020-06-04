@@ -15,7 +15,7 @@ public class IntroduccionCiclesPage extends PageBase {
 
     //Se heredan los metodos de pagebase
     public boolean introCiclesisDisplayed() throws Exception{
-        return this.isDisplayed(locatorTitleIntroCicles) && this.getText(locatorTitleIntroCicles).equals(introCiclesTitle);
+        return this.isDisplayed(locatorTitleIntroCicles) && this.read(locatorTitleIntroCicles).equals(introCiclesTitle);
     }
 
 

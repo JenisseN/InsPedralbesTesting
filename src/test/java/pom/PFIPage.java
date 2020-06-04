@@ -3,7 +3,6 @@ package pom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -18,7 +17,7 @@ public class PFIPage extends PageBase {
     }
 
     public boolean pfiPageisDisplayed() throws Exception {
-       return this.isDisplayed(locatorTitlePFI) && this.getText(locatorTitlePFI).equals(pfiPageTitle);
+       return this.isDisplayed(locatorTitlePFI) && this.read(locatorTitlePFI).equals(pfiPageTitle);
     }
 
     public void pfiPageClose() {

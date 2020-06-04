@@ -13,6 +13,6 @@ public class InternacionalPage  extends PageBase {
     }
 
     public boolean internacionalPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleInternacional) && this.getText(locatorTitleInternacional).equals(internacionalTitle);
+        return this.isDisplayed(locatorTitleInternacional) && this.read(locatorTitleInternacional).equals(internacionalTitle);
     }
 }
