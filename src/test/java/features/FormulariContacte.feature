@@ -15,20 +15,20 @@ Feature: Formulario de contacto
       | avisoCampoObligatorio    | avisoCamposErroneos                                                      |
       | El campo es obligatorio. | Uno o más campos tienen un error. Por favor revisa e inténtalo de nuevo. |
 
-  @SmokeTest
+
   Scenario Outline: FC_2 - Enviar un mensaje con más de 30 caracteres en los campos Nom, Correu, Assumpte y más de 500 caracteres en el campo Missatge.
     Given Aparace el Formulari de Contacte
     When Introduzco el siguiente texto en el campo El teu Nom: "<texto30>"
     And Introduzco el siguiente texto en el campo Correu: "<texto30>"
     And Introduzco el siguiente texto en el campo Assumpte: "<texto30>"
     And Introduzco el siguiente texto en el campo Missatge: "<texto500>"
-    Then Los campos El teu Nom, Correu y Assumpte no pueden superrar la cantidad de caracteres "<tamano30>" y "<tamano500>", el campo Missatge
+    Then Los campos El teu Nom, Correu y Assumpte no pueden superar la cantidad de caracteres "<tamano30>" y "<tamano500>", el campo Missatge
 
     Examples: Mensajes
       | tamano30 | tamano500 | texto30                                                                   | texto500                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
       | 30       | 500       | Lorem Ipsum is simply dummy text of the printing and typesetting industry | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software |
 
-  @SmokeTest
+
   Scenario Outline: FC_3 - Enviar un mensaje en el formulari de contacte con un correo invalido.
     Given Aparace el Formulari de Contacte
     When Introduzco el siguiente texto en el campo El teu Nom: "<textoTest>"

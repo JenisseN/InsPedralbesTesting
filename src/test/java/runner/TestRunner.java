@@ -9,8 +9,12 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions (
         features = "src/test/java/features" ,
-        glue = ("seleniumGlueCode"), tags = {"@SmokeTest"}
+        glue = ("seleniumGlueCode"), tags = {"@TestPP"}
 )
-// tags = {"@SmokeTest"}
+// tags = {"@TestPE"} Pestaña Estudis
+// tags = {"@TestPP"} Pestaña Projectes
+// tags = {"@TestFC"} Formulario Contacto
+// tags = {"@TestCL"} Check Links
+
 public class TestRunner {
 }

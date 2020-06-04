@@ -25,7 +25,7 @@ public class Hooks {
         driver= driverManager.getDriver();
         driver.manage().window().maximize();
         driver.get("http://www.institutpedralbes.cat/");
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @After
@@ -33,6 +33,7 @@ public class Hooks {
         System.out.println("El escenario nro: "+numberOfCase+ " se ejecuto");
         driverManager.quitDriver();
         System.out.println("Se ha cerrado el navegador");
+        System.out.println("***************************************************");
     }
 
     public static WebDriver getDriverInsPedralbes(){
