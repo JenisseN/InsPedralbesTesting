@@ -1,4 +1,3 @@
-
 Feature: Test pestañas Projectes de la web
   Description: Como usuario quiero acceder a todas las paginas de la pestaña Projectes de la web del Instituto Pedralbes
 

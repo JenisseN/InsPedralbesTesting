@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 public class HomePage extends PageBase {
 
     private String homePageTitle = "INSTITUT PEDRALBES";
-
     private By ButtonEstudisLocator = By.linkText("Estudis");
     private By ButtonIntroCiclesLocator = By.linkText("Introducció Cicles");
     private By ButtonDAMLocator = By.linkText("DAM (Desenvolupament d'aplicacions multiplataforma)");
@@ -17,7 +16,6 @@ public class HomePage extends PageBase {
     private By ButtonDAMVideoJLocator = By.linkText("DAM Videojocs");
     private By ButtonPFILocator = By.linkText("PFI");
     private By ButtonEquipImESOLocator = By.linkText("Equip impulsor ESO");
-
     private By ButtonProjectesLocator = By.linkText("Projectes");
     private By ButtonQualitatsLocator = By.linkText("Qualitat");
     private By ButtonRoboticaLocator = By.linkText("Robòtica");
@@ -38,7 +36,14 @@ public class HomePage extends PageBase {
         return this.getTittle().equals(homePageTitle);
     }
 
-    //Acesso a titulos de la pestaña estudis
+    public void toMoveMouseOnTittleProjectes() throws Exception {
+        this.moveToMouse(ButtonProjectesLocator);
+    }
+
+    public void toMoveMouseOnTitleInternacional() throws Exception {
+        this.moveToMouse(ButtonInternacionalLocator);
+    }
+
     public void clickOnTittleEstudis() throws Exception {
         this.moveToMouse(ButtonEstudisLocator);
     }
@@ -75,10 +80,6 @@ public class HomePage extends PageBase {
         this.click(ButtonEquipImESOLocator);
     }
 
-    public void toMoveMouseOnTittleProjectes() throws Exception {
-        this.moveToMouse(ButtonProjectesLocator);
-    }
-
     public void clickOnRobotica() throws Exception {
         this.click(ButtonRoboticaLocator);
     }
@@ -105,10 +106,6 @@ public class HomePage extends PageBase {
 
     public void clickOnInternacional() throws Exception {
         this.click(ButtonInternacionalLocator);
-    }
-
-    public void toMoveMouseOnTitleInternacional() throws Exception {
-        this.moveToMouse(ButtonInternacionalLocator);
     }
 
     public void clickOnMobilitatInternacional() throws Exception {

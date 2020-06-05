@@ -72,21 +72,20 @@ public class PageBase {
             throw new Exception("No se pudo clickear ni escribir en el elemento: " + element);
         }
     }
-///
+
     public void closeAndDisplay(By element) throws Exception {
         try {
-            ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+            ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
             driver.switchTo().window(tabs2.get(0));
             driver.close();
             driver.switchTo().window(tabs2.get(1));
-            WebElement elem =driver.findElement(element);
+            WebElement elem = driver.findElement(element);
             elem.isDisplayed();
             System.out.println("Se encontro " + elem.getText());
         } catch (Exception e) {
             throw new Exception("No se pudo clickear sobre el elemento: " + element);
         }
     }
-
 
 }
 

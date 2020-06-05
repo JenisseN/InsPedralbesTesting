@@ -4,12 +4,12 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)
+@RunWith ( Cucumber.class )
 
 
 @CucumberOptions (
-        features = "src/test/java/features" ,
-        glue = ("seleniumGlueCode"), tags = {"@TestPP"}
+        features = "src/test/java/features",
+        glue = ("seleniumGlueCode"), tags = {"@TestCL"}
 )
 // tags = {"@TestPE"} Pestaña Estudis
 // tags = {"@TestPP"} Pestaña Projectes

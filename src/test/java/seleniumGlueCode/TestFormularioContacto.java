@@ -1,6 +1,6 @@
 package seleniumGlueCode;
 
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,7 +8,6 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 
 public class TestFormularioContacto extends TestBase {
-
 
     @When("^Accedo a On Som y deslizo hacia abajo$")
     public void accedoAOnSomydeslizohaciaabajo() throws Exception {
@@ -23,9 +22,10 @@ public class TestFormularioContacto extends TestBase {
     }
 
     @Then("^Deben aparecer los siguientes mensajes \"([^\"]*)\" y \"([^\"]*)\"$")
-    public void debenAparecerLosSiguientesMensajesY(String msg1, String msg2) throws Throwable {
-        Assert.assertTrue(onSomPage.msgFieldRequiredisDisplayed(msg1));
-        //Assert.assertTrue(onSomPage.msgCheckCampsisDisplayed(msg2));// No encuentra el elemento
+    public void debenAparecerLosSiguientesMensajesY(String msgObligatory, String msgCheckErrors) throws Throwable {
+        Assert.assertTrue(onSomPage.msgFieldObligatoryisDisplayedName(msgObligatory));
+        Assert.assertTrue(onSomPage.msgFieldObligatoryisDisplayedEmail(msgObligatory));
+        Assert.assertTrue(onSomPage.msgCheckErrorsDisplayed(msgCheckErrors));
     }
 
 
@@ -51,17 +51,17 @@ public class TestFormularioContacto extends TestBase {
 
 
     @Then("^Deben aparecer los siguientes mensajes de error \"([^\"]*)\" y \"([^\"]*)\"$")
-    public void debenAparecerLosSiguientesMensajesDeErrorY(String msg1, String msg2) throws Throwable {
-        Assert.assertTrue(onSomPage.msgNotValidDisplayed(msg1));//No lee
-        Assert.assertTrue(onSomPage.msgCheckCampsisDisplayed(msg2));//No lee
+    public void debenAparecerLosSiguientesMensajesDeErrorY(String msgInvalid, String msgError) throws Throwable {
+        Assert.assertTrue(onSomPage.msgInvalidIsDisplayed(msgInvalid));
+        Assert.assertTrue(onSomPage.msgCheckErrorsDisplayed(msgError));
     }
 
     @Then("^Los campos El teu Nom, Correu y Assumpte no pueden superar la cantidad de caracteres \"([^\"]*)\" y \"([^\"]*)\", el campo Missatge")
     public void losCamposElTeuNomCorreuYAssumpteNoPuedenSuperarLaCantidadDeCaracteresYElCampoMissatge(String maxTextLength30, String maxTextLength500) throws Throwable {
-        System.out.println(onSomPage.readFieldName().length());
-        System.out.println(onSomPage.readFieldEmail().length());
-        System.out.println(onSomPage.readFieldTopic());
-        System.out.println(onSomPage.readFieldMessage());
+//        System.out.println(onSomPage.readFieldName().length());
+//        System.out.println(onSomPage.readFieldEmail().length());
+//        System.out.println(onSomPage.readFieldTopic());
+//        System.out.println(onSomPage.readFieldMessage());
 
         Assert.assertEquals(Integer.parseInt(maxTextLength30), onSomPage.readFieldName().length());
         Assert.assertEquals(Integer.parseInt(maxTextLength30), onSomPage.readFieldEmail().length());
@@ -79,10 +79,7 @@ public class TestFormularioContacto extends TestBase {
 //            topic = true;
 //        else if (Integer.parseInt(maxTextLength500) == onSomPage.readFieldMessage().length())
 //            message = true;
-
-
        // Assert.assertTrue(name && email && topic && message);
-
     }
 
     @Given("^Aparace el Formulari de Contacte$")

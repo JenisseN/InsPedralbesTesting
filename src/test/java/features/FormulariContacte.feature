@@ -5,7 +5,7 @@ Feature: Formulario de contacto
     Given Me encuentro en la pagina home de institutpedralbes
     When Accedo a On Som y deslizo hacia abajo
 
-
+  @TestFC
   Scenario Outline: FC_1 - Enviar un mensaje dejando todos los campos vacíos.
     Given Aparace el Formulari de Contacte
     When Hago click sobre el boton ENVIAR
@@ -28,7 +28,7 @@ Feature: Formulario de contacto
       | tamano30 | tamano500 | texto30                                                                   | texto500                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
       | 30       | 500       | Lorem Ipsum is simply dummy text of the printing and typesetting industry | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software |
 
-
+  @TestFC
   Scenario Outline: FC_3 - Enviar un mensaje en el formulari de contacte con un correo invalido.
     Given Aparace el Formulari de Contacte
     When Introduzco el siguiente texto en el campo El teu Nom: "<textoTest>"

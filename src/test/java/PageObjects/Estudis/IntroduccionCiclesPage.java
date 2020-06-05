@@ -14,8 +14,7 @@ public class IntroduccionCiclesPage extends PageBase {
         super(driver);
     }
 
-    //Se heredan los metodos de pagebase
-    public boolean introCiclesisDisplayed() throws Exception{
+    public boolean introCiclesisDisplayed() throws Exception {
         return this.isDisplayed(locatorTitleIntroCicles) && this.read(locatorTitleIntroCicles).equals(introCiclesTitle);
     }
 

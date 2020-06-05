@@ -1,4 +1,5 @@
 package PageObjects.Home;
+
 import PageObjects.PageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -7,19 +8,18 @@ import org.openqa.selenium.WebDriver;
 
 public class OnSomPage extends PageBase {
 
-    private  String onSomTitle = "On som";
+    private String onSomTitle = "On som";
     private By locatorTitleOnSom = By.className("page-title");
-    private By locatorEnviarB =By.cssSelector("input[type='submit'][value='Enviar']");
-
-    private By locatormsgObligaroty= By.partialLinkText("El campo es obligatorio.");
-    private By locatormsgCheckCamps= By.className("wpcf7-response-output wpcf7-display-none wpcf7-validation-errors");///no se encontro el locatorr
-    private By locatormsgNotValid = By.xpath("//form[@class='wpcf7-form invalid']//div[@class='wpcf7-response-output wpcf7-display-none wpcf7-validation-errors']"); // //tipoElemento[@TipoLocalizador='nombreLocalizador']
-
+    private By locatorEnviarB = By.cssSelector("input[type='submit'][value='Enviar']");
+    private By locatormsgCheckErrors = By.xpath("//form[@class='wpcf7-form invalid']//div[@class='wpcf7-response-output wpcf7-display-none wpcf7-validation-errors']");
+    private By locatormsgObligatoryName = By.xpath("//form[@class='wpcf7-form invalid']//div[@class='vc_row make-an-appointment-form']//div[@class='vc_col-sm-6']//span[@class='wpcf7-form-control-wrap your-name']//span[@class='wpcf7-not-valid-tip']");
+    private By locatormsgObligatoryEmail = By.xpath("//form[@class='wpcf7-form invalid']//div[@class='vc_row make-an-appointment-form']//div[@class='vc_col-sm-6']//span[@class='wpcf7-form-control-wrap your-email']//span[@class='wpcf7-not-valid-tip']");
+    //PROBANDO Mostrar imagenes a Moha
+    private By locatormsgInvalid = By.xpath("//form[@class='wpcf7-form invalid']//div[@class='vc_row make-an-appointment-form']//div[@class='vc_col-sm-6']//span[@class='wpcf7-form-control-wrap your-email']//span[@class='wpcf7-not-valid-tip']");
     private By locatorFieldName = By.name("your-name");
-    private By locatorFieldEmail =  By.name ("your-email");
-    private By locatorFieldTopic =  By.name("your-subject");
+    private By locatorFieldEmail = By.name("your-email");
+    private By locatorFieldTopic = By.name("your-subject");
     private By locatorFieldMessage = By.name("your-message");
-
 
     public OnSomPage(WebDriver driver) {
         super(driver);
@@ -28,8 +28,8 @@ public class OnSomPage extends PageBase {
     public void clickSendButton() throws Exception {
         if (this.isDisplayed(locatorEnviarB)) {
             this.click(locatorEnviarB);
-        }else {
-            System.out.println("El boton "+ locatorEnviarB +" no se encontro ni se pudo clickar.");
+        } else {
+            System.out.println("El boton " + locatorEnviarB + " no se encontro ni se pudo clickar.");
         }
     }
 
@@ -37,16 +37,20 @@ public class OnSomPage extends PageBase {
         return this.isDisplayed(locatorTitleOnSom) && this.read(locatorTitleOnSom).equals(onSomTitle);
     }
 
-    public boolean msgFieldRequiredisDisplayed(String msgRequired) throws Exception {
-        return this.read(locatormsgObligaroty).equals(msgRequired);
+    public boolean msgFieldObligatoryisDisplayedName(String msgNotValidName) throws Exception {
+        return this.read(locatormsgObligatoryName).equals(msgNotValidName);
     }
 
-    public boolean msgNotValidDisplayed(String msgNotValid) throws Exception {
-        return this.read(locatormsgNotValid).equals(msgNotValid);
+    public boolean msgFieldObligatoryisDisplayedEmail(String msgObligatoryEmail) throws Exception {
+        return this.read(locatormsgObligatoryEmail).equals(msgObligatoryEmail);
     }
 
-    public boolean msgCheckCampsisDisplayed(String msgCheck) throws Exception {
-        return this.read(locatormsgCheckCamps).equals(msgCheck);
+    public boolean msgCheckErrorsDisplayed(String msgErrors) throws Exception {
+        return this.read(locatormsgCheckErrors).equals(msgErrors);
+    }
+
+    public boolean msgInvalidIsDisplayed(String msgInvalid) throws Exception {
+        return this.read(locatormsgInvalid).equals(msgInvalid);
     }
 
     public void writeInCampName(String msgFieldName) throws Exception {
@@ -90,5 +94,6 @@ public class OnSomPage extends PageBase {
         return isDisplayed(locatorFieldName) && isDisplayed(locatorFieldEmail) && isDisplayed(locatorFieldTopic) && isDisplayed(locatorFieldMessage)
                 && isDisplayed(locatorEnviarB);
     }
+
 
 }

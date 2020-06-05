@@ -4,10 +4,6 @@ import PageObjects.PageBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
 public class PFIPage extends PageBase {
 
     private String pfiPageTitle = "PFI";
@@ -19,7 +15,7 @@ public class PFIPage extends PageBase {
 
     public boolean pfiPageisDisplayed() throws Exception {
         this.closeAndDisplay(locatorTitlePFI);
-       return this.read(locatorTitlePFI).equals(pfiPageTitle);
+        return this.read(locatorTitlePFI).equals(pfiPageTitle);
     }
 
 
