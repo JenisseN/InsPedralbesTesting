@@ -6,7 +6,7 @@ Feature: Test pestañas Estudis de la web
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Estudis
 
-  @TestPE
+
   Scenario: PE_1 - Quiero acceder a la pantalla Introduccion ciclos desde la pantalla Home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Estudis
@@ -55,7 +55,7 @@ Feature: Test pestañas Estudis de la web
     And En Estudis hago click sobre el boton PFI
     Then Accedo a la pantalla PFI
 
-
+  @TestPE
   Scenario: PE_8 - Quiero acceder a la pantalla Equip impulsor ESO desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Estudis

@@ -5,21 +5,21 @@ Feature: Test pestañas Projectes de la web
     Given Me encuentro en la pagina home del institutpedralbes
     When Despliego la pestaña Projectes
 
-
+  @TestPP
   Scenario: PP_1 - Quiero acceder a la pantalla Robotica desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Projectes
     And En Projectes hago click sobre el boton Robotica
     Then Accedo a la pantalla Robotica
 
-
+  @TestPP
   Scenario: PP_2 - Quiero acceder a la pantalla Qualitat desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Projectes
     And En Projectes hago click sobre el boton Qualitat
     Then Accedo a la pantalla Qualitat
 
-  @TestPP
+
   Scenario: PP_3 - Quiero acceder a la pantalla Internacional desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Projectes
