@@ -1,4 +1,4 @@
-package seleniumGlueCode;
+package stepsDefinition;
 
 
 import cucumber.api.java.en.And;
@@ -7,7 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 
-public class TestFormularioContacto extends TestBase {
+public class TestFormulariContacte extends TestBase {
 
     @When("^Accedo a On Som y deslizo hacia abajo$")
     public void accedoAOnSomydeslizohaciaabajo() throws Exception {

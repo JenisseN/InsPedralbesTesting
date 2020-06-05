@@ -1,4 +1,4 @@
-package seleniumGlueCode;
+package stepsDefinition;
 
 import PageObjects.Estudis.*;
 import PageObjects.Home.HomePage;

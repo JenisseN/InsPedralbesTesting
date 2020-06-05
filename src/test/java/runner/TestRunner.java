@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions (
         features = "src/test/java/features",
-        glue = ("seleniumGlueCode"), tags = {"@TestPE"}
+        glue = ("stepsDefinition"), tags = {"@TestPE"}
 )
 
 public class TestRunner {

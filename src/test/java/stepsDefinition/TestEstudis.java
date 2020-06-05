@@ -1,4 +1,4 @@
-package seleniumGlueCode;
+package stepsDefinition;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;

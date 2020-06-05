@@ -1,18 +1,18 @@
 
 Feature: Test pestañas Estudis de la web
-  Description: Como usuario quiero acceder a todas las paginas de la pestaña Estudis de la web del Instituto Pedralbes
+  Description: Como usuario quiero acceder a todas las paginas de la pestaña
+                Estudis de la web del Instituto Pedralbes
 
   Background:
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Estudis
 
-
+  @TestPE
   Scenario: PE_1 - Quiero acceder a la pantalla Introduccion ciclos desde la pantalla Home
     Given Me encuentro en la pagina home de institutpedralbes
     When Despliego la pestaña Estudis
     And En Estudis hago click sobre el boton Introduccio cicles
     Then Accedo a la pantalla Introduccio Cicles
-
 
   Scenario: PE_2 - Quiero acceder a la pantalla DAM Desemvolupament d'aplicaciones multiplataforma desde la pantalla home
     Given Me encuentro en la pagina home de institutpedralbes
