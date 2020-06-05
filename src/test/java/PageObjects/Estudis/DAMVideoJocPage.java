@@ -14,7 +14,7 @@ public class DAMVideoJocPage extends PageBase {
     }
 
     public boolean damVideoJocsPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleDAMVideoJ) && this.read(locatorTitleDAMVideoJ).equals(damVideoJTitle);
+        return this.isDisplayed(locatorTitleDAMVideoJ) && this.readInTextField(locatorTitleDAMVideoJ).equals(damVideoJTitle);
     }
 
 }

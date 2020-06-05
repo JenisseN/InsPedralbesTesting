@@ -15,7 +15,6 @@ Feature: Formulario de contacto
       | avisoCampoObligatorio    | avisoCamposErroneos                                                      |
       | El campo es obligatorio. | Uno o más campos tienen un error. Por favor revisa e inténtalo de nuevo. |
 
-
   Scenario Outline: FC_2 - Enviar un mensaje con más de 30 caracteres en los campos Nom, Correu, Assumpte y más de 500 caracteres en el campo Missatge.
     Given Aparace el Formulari de Contacte
     When Introduzco el siguiente texto en el campo El teu Nom: "<texto30>"

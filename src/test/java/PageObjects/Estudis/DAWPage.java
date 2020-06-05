@@ -15,7 +15,7 @@ public class DAWPage extends PageBase {
     }
 
     public boolean dawPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleDAW) && this.read(locatorTitleDAW).equals(dawTitle);
+        return this.isDisplayed(locatorTitleDAW) && this.readInTextField(locatorTitleDAW).equals(dawTitle);
     }
 
 }

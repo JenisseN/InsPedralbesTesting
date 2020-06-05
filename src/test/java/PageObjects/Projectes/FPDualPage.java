@@ -14,6 +14,6 @@ public class FPDualPage  extends PageBase {
     }
 
     public boolean fpDualPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleFPDual) && this.read(locatorTitleFPDual).equals(fpDualTitle);
+        return this.isDisplayed(locatorTitleFPDual) && this.readInTextField(locatorTitleFPDual).equals(fpDualTitle);
     }
 }

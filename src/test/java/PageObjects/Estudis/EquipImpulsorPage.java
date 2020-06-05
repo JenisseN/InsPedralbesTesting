@@ -16,7 +16,7 @@ public class EquipImpulsorPage extends PageBase {
 
     public boolean equipImpulsorPageisDisplayed() throws Exception {
         this.closeAndDisplay(locatorTitleEquipImESO);
-        return this.read(locatorTitleEquipImESO).equals(equipImESOTitle);
+        return this.readInTextField(locatorTitleEquipImESO).equals(equipImESOTitle);
     }
 
 }

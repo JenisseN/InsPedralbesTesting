@@ -15,7 +15,7 @@ public class PFIPage extends PageBase {
 
     public boolean pfiPageisDisplayed() throws Exception {
         this.closeAndDisplay(locatorTitlePFI);
-        return this.read(locatorTitlePFI).equals(pfiPageTitle);
+        return this.readInTextField(locatorTitlePFI).equals(pfiPageTitle);
     }
 
 

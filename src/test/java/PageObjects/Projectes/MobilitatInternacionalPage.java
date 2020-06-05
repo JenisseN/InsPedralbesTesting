@@ -14,6 +14,6 @@ public class MobilitatInternacionalPage extends PageBase {
     }
 
     public boolean movilitatInPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleMobilitatInt) && this.read(locatorTitleMobilitatInt).equals(mobilitatInTitle);
+        return this.isDisplayed(locatorTitleMobilitatInt) && this.readInTextField(locatorTitleMobilitatInt).equals(mobilitatInTitle);
     }
 }

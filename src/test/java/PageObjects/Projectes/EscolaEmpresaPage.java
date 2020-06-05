@@ -14,6 +14,6 @@ public class EscolaEmpresaPage  extends PageBase {
     }
 
     public boolean escolaEmpresaPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleEscolaemp) && this.read(locatorTitleEscolaemp).equals(escolaEmInTitle);
+        return this.isDisplayed(locatorTitleEscolaemp) && this.readInTextField(locatorTitleEscolaemp).equals(escolaEmInTitle);
     }
 }

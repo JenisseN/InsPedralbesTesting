@@ -32,7 +32,7 @@ public class PageBase {
         }
     }
 
-    public String read(By element) throws Exception {
+    public String readInTextField(By element) throws Exception {
         try {
             return driver.findElement(element).getText();
         } catch (Exception e) {
@@ -61,11 +61,9 @@ public class PageBase {
     }
 
 
-    public void clickAndWrite(By element, String data) throws Exception {
+    public void writeInTextField(By element, String data) throws Exception {
         try {
             WebElement eTextBox = driver.findElement(element);
-            eTextBox.click();
-            System.out.println("Se clicko " + element);
             eTextBox.clear();
             eTextBox.sendKeys(data);
             System.out.println("Y se introdujo: " + data);

@@ -15,7 +15,7 @@ public class DAMPage extends PageBase {
     }
 
     public boolean damPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleDAM) && this.read(locatorTitleDAM).equals(damTitle);
+        return this.isDisplayed(locatorTitleDAM) && this.readInTextField(locatorTitleDAM).equals(damTitle);
     }
 
 

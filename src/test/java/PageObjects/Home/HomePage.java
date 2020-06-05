@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage extends PageBase {
-
     private String homePageTitle = "INSTITUT PEDRALBES";
     private By ButtonEstudisLocator = By.linkText("Estudis");
     private By ButtonIntroCiclesLocator = By.linkText("Introducció Cicles");
@@ -24,7 +23,7 @@ public class HomePage extends PageBase {
     private By ButtonEmpreneduriaLocator = By.linkText("Emprenedoria");
     private By ButtonInnovaFPLocator = By.linkText("InnovaFP");
     private By ButtonMovilidadInternacionalLocator = By.linkText("Mobilitat internacional");
-    private By ButtonInternacionalLocator = By.className("sf-with-ul");
+    private By ButtonInternacionalLocator = By.linkText("International");
     private By ButtonOnSom = By.linkText("On som");
 
 

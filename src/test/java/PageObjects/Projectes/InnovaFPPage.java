@@ -14,6 +14,6 @@ public class InnovaFPPage extends PageBase {
     }
 
     public boolean innovaFPPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleInnovaFP) && this.read(locatorTitleInnovaFP).equals(innovaFPTitle);
+        return this.isDisplayed(locatorTitleInnovaFP) && this.readInTextField(locatorTitleInnovaFP).equals(innovaFPTitle);
     }
 }

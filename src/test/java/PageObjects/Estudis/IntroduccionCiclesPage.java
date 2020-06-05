@@ -15,7 +15,7 @@ public class IntroduccionCiclesPage extends PageBase {
     }
 
     public boolean introCiclesisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleIntroCicles) && this.read(locatorTitleIntroCicles).equals(introCiclesTitle);
+        return this.isDisplayed(locatorTitleIntroCicles) && this.readInTextField(locatorTitleIntroCicles).equals(introCiclesTitle);
     }
 
 
