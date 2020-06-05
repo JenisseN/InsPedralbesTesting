@@ -20,7 +20,7 @@ public class PageBase {
             driver.findElement(element).click();
             System.out.println("Se clicko " + element);
         } catch (Exception e) {
-            throw new Exception("No se pudo clickear sobre el elemento: " + element.toString());
+            throw new Exception("No se pudo clickear sobre el elemento: " + element);
         }
     }
 
@@ -59,6 +59,7 @@ public class PageBase {
             throw new Exception("No se pudo mover sobre el elemento: " + element);
         }
     }
+
 
     public void clickAndWrite(By element, String data) throws Exception {
         try {
