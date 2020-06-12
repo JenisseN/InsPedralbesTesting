@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class InternacionalPage  extends PageBase {
 
-    private String internacionalTitle = "International";
+    private String InternacionalPage = "International";
     private By locatorTitleInternacional= By.className("page-title");
 
     public InternacionalPage(WebDriver driver) {
@@ -14,6 +14,6 @@ public class InternacionalPage  extends PageBase {
     }
 
     public boolean internacionalPageisDisplayed() throws Exception {
-        return this.isDisplayed(locatorTitleInternacional) && this.readInTextField(locatorTitleInternacional).equals(internacionalTitle);
+        return this.isDisplayed(locatorTitleInternacional) && this.readInTextField(locatorTitleInternacional).equals(InternacionalPage);
     }
 }

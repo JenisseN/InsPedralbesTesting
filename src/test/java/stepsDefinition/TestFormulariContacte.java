@@ -10,16 +10,16 @@ import org.junit.Assert;
 public class TestFormulariContacte extends TestBase {
 
 
-    @Given("^Aparace el Formulari de Contacte$")
-    public void aparaceElFormulariDeContacte() throws Throwable {
-        Assert.assertTrue(onSomPage.formluariIsDisplayed());
-    }
-
     @When("^Accedo a On Som y deslizo hacia abajo$")
     public void accedoAOnSomydeslizohaciaabajo() throws Exception {
         homePage.clickOnOnSom();
         Assert.assertTrue(onSomPage.onSomisDisplayed());
         onSomPage.scrollDownToBottonPage();
+    }
+
+    @Given("^Aparace el Formulari de Contacte$")
+    public void aparaceElFormulariDeContacte() throws Throwable {
+        Assert.assertTrue(onSomPage.formulariIsDisplayed());
     }
 
     @When("^Hago click sobre el boton ENVIAR$")

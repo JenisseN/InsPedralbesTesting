@@ -79,7 +79,6 @@ public class PageBase {
             driver.close();
             driver.switchTo().window(tabs2.get(1));
             WebElement elem = driver.findElement(element);
-            elem.isDisplayed();
             System.out.println("Se encontro " + elem.getText());
         } catch (Exception e) {
             throw new Exception("No se pudo clickear sobre el elemento: " + element);

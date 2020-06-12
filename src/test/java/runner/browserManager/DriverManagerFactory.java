@@ -1,6 +1,8 @@
 package runner.browserManager;
 
 
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
 public class DriverManagerFactory {
 
     public static DriverManager getManager(DriverType type) {
@@ -12,6 +14,9 @@ public class DriverManagerFactory {
             case FIREFOX:
                 driverManager = new FirefoxDriverManager();
                 break;
+            case EXPLORER:
+                driverManager = new IExplorerDriverManager();
+                break;
             default:
                 System.out.print("El navegador seleccionado es invalido");
                 break;
@@ -19,3 +24,11 @@ public class DriverManagerFactory {
         return driverManager;
     }
 }
+
+
+
+
+
+
+
+
